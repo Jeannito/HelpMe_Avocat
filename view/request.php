@@ -14,8 +14,58 @@
 
 <body>
 
-<?php  include 'includes/navbar.php';  ?>
+<?php  include 'includes/navbar.php'; ?>
 
+</br>
+</br>
+</br>
+
+<?php
+require_once '../model/model_request.php';
+$req = ModelRequest::GetRequest($_POST['id_request']); 
+require_once '../model/model_user.php';
+$user = ModelUser::GetUser($req['idUser']); ?>
+
+      <div class="box">
+      <div class='container'>           
+            <table class='responsive-table'>
+              <thead>
+              <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Sub Domain</th>
+                <th>Gender</th>
+                <th>Personnality</th>
+                <th>Location</th>
+                <th>Experience</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td><?php echo $user['firstname'];?></td>
+                <td><?php echo $user['lastname'];?></td>
+                <td><?php echo $req['subDomain'];?></td>
+                <td><?php echo $req['gender'];;?></td>
+                <td><?php echo $req['personality'];;?></td>
+                <td><?php echo $req['position'];;?></td>
+                <td><?php echo $req['experience'];;?></td>
+                <?php if($req['isTreated'] == 0 ){ ?>
+                <td>
+                <form action="../controller/controller_find_lawyers.php"  name="profil" role="form" class="form-horizontal" method="post" accept-charset="utf-8">
+                <input type="hidden" name="id_request" value="<?php echo $_POST['id_request'];?>">
+                <input   class="btn btn-primary btn btn-primary light-blue" type="submit" value="Find lawyers"/>
+                </form>
+                </td>
+                <?php } ?>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+
+<?php if($req['isTreated'] == 0 ){ ?>
+
+<?php } else {
+?>
   <!-- //////////////////////////////////////////////////////////////////////////// -->
     <div class="section scrollspy" id="work">
     <div class="container">
@@ -25,7 +75,6 @@
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
                       <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light  pink accent-2">56 %</a>
-                        <img class="activator" src="../Images/user.png">
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Erick Taru <i class="mdi-navigation-more-vert right"></i></span>
@@ -41,7 +90,6 @@
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
                     <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light  pink accent-2">56 %</a>
-                        <img class="activator" src="../Images/user.png">
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Jean Bruté de Rémur <i class="mdi-navigation-more-vert right"></i></span>
@@ -57,7 +105,6 @@
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
                     <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light  pink accent-2">56 %</a>
-                        <img class="activator" src="../Images/user.png">
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Samuel Orru<i class="mdi-navigation-more-vert right"></i></span>
@@ -72,7 +119,15 @@
         </div>
     </div>
 </div>
+
+<?php } ?>
+
 </body>
 
+</br>
+</br>
+</br>
+
 <?php  include 'includes/footer.php';  ?>
+
 </html>

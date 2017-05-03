@@ -3,9 +3,7 @@
  * Created by PhpStorm.
  * User: jeanb2r
  * Date: 26/04/2017
- * Time: 16:38
+ * Time: 16:41
  */
 
-header("Location: controller/controller_home.php");
-
-
+require_once "../view/list_request.php";

@@ -2,7 +2,8 @@
   <title>New request</title>
 
   <!-- Favicons-->
-  <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/jpg" href="../images/h.jpg" />
+
 
   <!-- CORE CSS-->
   

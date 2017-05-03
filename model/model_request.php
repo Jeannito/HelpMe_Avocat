@@ -19,6 +19,31 @@ class ModelRequest
     
     }
 
+    public static function GetAllRequest(){
+
+    $bd = new PDO('mysql:host=localhost;dbname=HelpMe_Avocat;charset=utf8', 'root', '');
+
+    $req = $bd->query('SELECT * FROM request');
+
+    return $req -> fetchAll(PDO::FETCH_OBJ);
+
+        
+    }
+
+    public static function GetRequest($id){
+
+    $bd = new PDO('mysql:host=localhost;dbname=HelpMe_Avocat;charset=utf8', 'root', '');
+
+    $req = $bd->prepare('SELECT * FROM request WHERE id = ? ');
+
+    $req->execute(array($id));
+
+    $res = $req -> fetch();
+
+    return $res;
+
+    }
+
 
 
 }
