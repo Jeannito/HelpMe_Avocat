@@ -95,7 +95,7 @@
               <div class="input-field col s6">
                   <select class="browser-default" name="subDomain">
                     <option value="" disabled selected>Choose a domain</option>
-                    <option value="Less than 3 years">Haha</option>
+                    <option value="Haha">Haha</option>
                     <option value="Between 3 and 5 years">Hoho</option>
                     <option value="More than 5 years">Hehe</option>
                     <option value="I don't care">Huhu</option>
