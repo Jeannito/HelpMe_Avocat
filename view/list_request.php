@@ -21,7 +21,7 @@
     <div>
       <form action="../controller/controller_recherche_vin.php" name="search" class="navbar-form" role="search" method="post" accept-charset="utf-8">
         <div class="form-group">
-          <input type="text" name="motclef" id="Userlogin" class="form-control light-blue" placeholder="Tapez le mot clé">
+          <input type="text" name="motclef" id="Userlogin" class="form-control" placeholder="Tapez le mot clé">
         </div>
         <button type="submit" class="btn btn-default light-blue"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search</button>
         </form>
