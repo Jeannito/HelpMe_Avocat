@@ -22,7 +22,7 @@
         <div class="form-group">
           <input type="text" name="motclef" id="Userlogin" class="form-control" placeholder="Tapez le mot clé">
         </div>
-        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search</button>
+        <button type="submit" class="btn btn-default light-blue"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search</button>
         </form>
     </div>
 
@@ -55,7 +55,7 @@
            <td>
             <form action="../controller/controller_member_profile.php"  name="profil" role="form" class="form-horizontal" method="post" accept-charset="utf-8">
             <input type="hidden" name="id_user" value="<?php echo $id_user;?>">
-            <input   class="btn btn-primary btn btn-primary" type="submit" value="User Profile"/>
+            <input   class="btn btn-primary btn btn-primary light-blue" type="submit" value="User Profile"/>
             </form>
            </td>
           </tr>

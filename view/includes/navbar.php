@@ -7,7 +7,7 @@
 </ul>
 <nav class="light-blue">
   <div class="nav-wrapper">
-    <a href="../controller/controller_request.php" class="brand-logo">Logo</a>
+    <a href="../controller/controller_form.php" class="brand-logo">Logo</a>
     <ul class="right hide-on-med-and-down">
       <li><a href="../controller/controller_members.php">Members</a></li>
       <li><a href="../controller/controller_list_request.php">Request</a></li>
