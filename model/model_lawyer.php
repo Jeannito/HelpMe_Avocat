@@ -16,11 +16,11 @@ class ModelLawyer
 
         $bd = new PDO('mysql:host=localhost;dbname=HelpMe_Avocat;charset=utf8', 'root', '');
 
-        $req = $bd->prepare('SELECT COUNT(*) FROM AVOCATS WHERE email = ? ');
+        $req = $bd->prepare('SELECT * FROM LAWYERS WHERE subDomain = ? ');
 
         $req -> execute(array($subDomain));
 
-        $resultat = $req->fetch();
+        return $req;
 
     }
 

@@ -44,6 +44,13 @@ class ModelRequest
 
     }
 
+    public static function TreatRequest($id){
 
+    $bd = new PDO('mysql:host=localhost;dbname=HelpMe_Avocat;charset=utf8', 'root', '');
 
+    $req = $bd->prepare('UPDATE request SET isTreated = 1 WHERE id = ? ');
+
+    $req->execute(array($id));
+
+    }
 }

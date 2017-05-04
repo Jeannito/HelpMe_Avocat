@@ -1,12 +1,20 @@
 <?php
 
+require_once '../model/model_request.php';
+
+require_once '../model/model_lawyer.php';
+
+require_once '../model/model_criterion.php';
+
 $request = ModelRequest::GetRequest($_POST['id_request']);
 
-$lawyersBySkill = ModelLawyers::GetLawyersBySubDomain($request['$subDomain']);
+$lawyersBySkill = ModelLawyers::getBySubDomain($request['$subDomain']);
 
 $lawyerObject = ChangeInObject($lawyersBySkill);
 
-$lawyerAfterSecondStep = FindCompatibilityForForm($lawyerObject);
+$criterionForm = ModelCriterion::getCriterionForm();
+
+$lawyerAfterSecondStep = FindCompatibilityForForm($lawyerObject, $criterionForm);
 
 $lawyerAfterThirdStep = FindCompatibilityHelpMeCriterion($lawyerAfterSecondStep);
 
