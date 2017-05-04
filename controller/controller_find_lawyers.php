@@ -17,3 +17,4 @@ ModelLawyers::RegisterTheChoosenLawyers($lawyerFinal);
 ModelRequest::TreatRequest($_POST['id_request']);
 
 require_once '../view/request.php';
+
