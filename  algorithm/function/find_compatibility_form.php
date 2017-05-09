@@ -2,9 +2,9 @@
 
 function FindCompatibilityForForm($lawyerObject, $criterionForm, $request) {
 
-	$n = count($criterionForm); //number of criterions
-	$sum = 0; //initialization of the sum used to calculate the compatibility %
-	$c = 0; //initialization of the compatibility %
+	int n = count($criterionForm); //number of criterions
+	int sum = 0; //initialization of the sum used to calculate the compatibility %
+	int c = 0; //initialization of the compatibility %
 
 	$tabCoeff = array(n); //array of coefficients for the criterions
 	$tabCriterion = array(n); //array of the different criterions
@@ -17,17 +17,25 @@ function FindCompatibilityForForm($lawyerObject, $criterionForm, $request) {
 
 	foreach ($request as $criterionRequest) {
 
-		if($criterionRequest[i] == $tabCriterion) {
-			$tabValueCriterion = 
+		int i = 0;
+		int j = 0;
+
+		if($criterionRequest[i] == $tabCriterion[j]) {
+			$tabValueCriterion = $criterionRequest[$tabCriterion[j]];
+			i++;
+			j++;
+		}
+		else {
+			j++;
 		}
 
 	}
 
 	foreach ($lawyerObject as $lawyer) { //loop to calculate the compatibility %
 		
-		foreach ($tabCriterion as $criterion) { //loop to compare the lawyer's properties with the desired criterions
+		foreach ($tabValueCriterion as $criterion) { //loop to compare the lawyer's properties with the desired criterions
 
-			$i = 0;
+			i = 0;
 
 			if($criterion == $lawyerObject-> {
 				$sum += $tabCoeff[i];
