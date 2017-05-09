@@ -8,7 +8,7 @@ require_once '../model/model_criterion.php';
 
 $request = ModelRequest::GetRequest($_POST['id_request']);
 
-$lawyersBySkill = ModelLawyers::getBySubDomain($request['$subDomain']);
+$lawyersBySkill = ModelLawyer::getBySubDomain($request['$subDomain']);
 
 $lawyerObject = ChangeInObject($lawyersBySkill);
 
@@ -20,7 +20,7 @@ $lawyerAfterThirdStep = FindCompatibilityHelpMeCriterion($lawyerAfterSecondStep)
 
 $lawyerFinal = ChooseTheFinalLawyer($lawyerAfterThirdStep);
 
-ModelLawyers::RegisterTheChoosenLawyers($lawyerFinal);
+ModelLawyer::RegisterTheChoosenLawyers($lawyerFinal);
 
 ModelRequest::TreatRequest($_POST['id_request']);
 
