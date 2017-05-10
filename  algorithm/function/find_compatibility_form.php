@@ -22,13 +22,13 @@ function FindCompatibilityForForm($lawyerObject, $criterionForm, $request) {
 		$i++;
 	}
 
-	foreach ($lawyerObject as $lawyer) { //loop to calculate the compatibility %
+	foreach ($lawyerObject as $lawyer) { //loop to calculate the compatibility % for each lawyer
 		
 		foreach ($tabValueCriterion as $criterion) { //loop to compare the lawyer's properties with the desired criterions
 
 			$i = 0;
 
-			if($tabValueCriterion[$i] == $lawyerObject->get($tabCriterion[$i])) {
+			if($tabValueCriterion[$i] == $lawyerObject->get($tabCriterion[$i]) || $tabValueCriterion[$i] == 'I don\'t care') { //if the values match, our compatibility percentage increases
 				$sum += $tabCoeff[$i]*$n;
 				$i++;
 			}
