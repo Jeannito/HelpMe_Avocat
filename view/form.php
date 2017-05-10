@@ -94,11 +94,20 @@
             <div class="row">
               <div class="input-field col s6">
                   <select class="browser-default" name="subDomain">
-                    <option value="" disabled selected>Choose a domain</option>
-                    <option value="Haha">Haha</option>
-                    <option value="Between 3 and 5 years">Hoho</option>
-                    <option value="More than 5 years">Hehe</option>
-                    <option value="I don't care">Huhu</option>
+                  <option value="" disabled selected>Choose a domain</option>
+                   <?php
+                    /*require_once '../model/model_subDomain.php';
+                    $subDomain = ModelSubDomain::getSubDomain();
+                    foreach ($subDomain as $oneSubDomain) {
+                    $label = $oneSubDomain -> id;
+                    ?>
+                    <option value="<?php echo $label;?>"><?php echo $label;?></option>
+                    <?php } */?>
+                    <option value="Societe">Societe</option>
+                    <option value="Fiscale">Fiscale</option>
+                    <option value="Changement de nom">Changement de nom</option>
+                    <option value="Divorce">Divorce</option>
+                    <option value="I don't care">I don't care</option>
                   </select>
               </div>
             </div>
