@@ -22,7 +22,7 @@ echo $lawyerObject[0]->getLastname();
 
 $criterionForm = ModelCriterion::getCriterionForm();
 
-$lawyerAfterSecondStep = FindCompatibilityForForm($lawyerObject, $criterionForm);
+$lawyerAfterSecondStep = FindCompatibilityForForm($lawyerObject, $criterionForm, $request);
 
 /*$lawyerAfterThirdStep = FindCompatibilityHelpMeCriterion($lawyerAfterSecondStep);
 
