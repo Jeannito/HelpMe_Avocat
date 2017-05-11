@@ -159,7 +159,7 @@ class Lawyer{
         $this->_id = $id;
     }
 
-    public function get($criterion)
+    public function getInfo($criterion)
     {
         if($criterion == 'gender'){
            return $this->_gender; 
@@ -173,6 +173,7 @@ class Lawyer{
         if($criterion == 'position'){
            return $this->_position; 
         }
+        return 'No criterions found';
     }
 
     /**

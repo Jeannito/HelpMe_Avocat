@@ -10,6 +10,8 @@ require_once '../model/model_subDomain.php';
 
 require_once '../function/changeInObject.php';
 
+require_once '../function/find_compatibility_form.php';
+
 $request = ModelRequest::GetRequest($_POST['id_request']);
 
 $subDomain = ModelSubDomain::GetSubDomainByLabel($request['subDomain']);
@@ -20,17 +22,13 @@ $lawyerObject = ChangeInObject($lawyersBySkill);
 
 echo $lawyerObject[0]->getLastname();
 
-$subDomain = ModelSubDomain::GetSubDomain();
-foreach ($subDomain as $oneSubDomain) {
-$label = $oneSubDomain['idSubDomain'];
-echo $label;
-}
-
 $criterionForm = ModelCriterion::getCriterionForm();
 
-/*$lawyerAfterSecondStep = FindCompatibilityForForm($lawyerObject, $criterionForm, $request);
+$lawyerAfterSecondStep = FindCompatibilityForForm($lawyerObject, $criterionForm, $request);
 
 $lawyerAfterThirdStep = FindCompatibilityHelpMeCriterion($lawyerAfterSecondStep);
+
+echo $lawyerObject[2]->getFormCompatibility();
 
 $lawyerFinal = ChooseTheFinalLawyer($lawyerAfterThirdStep);
 
