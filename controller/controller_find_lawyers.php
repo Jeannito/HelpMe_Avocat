@@ -20,11 +20,17 @@ $lawyerObject = ChangeInObject($lawyersBySkill);
 
 echo $lawyerObject[0]->getLastname();
 
+$subDomain = ModelSubDomain::GetSubDomain();
+foreach ($subDomain as $oneSubDomain) {
+$label = $oneSubDomain['idSubDomain'];
+echo $label;
+}
+
 $criterionForm = ModelCriterion::getCriterionForm();
 
-$lawyerAfterSecondStep = FindCompatibilityForForm($lawyerObject, $criterionForm, $request);
+/*$lawyerAfterSecondStep = FindCompatibilityForForm($lawyerObject, $criterionForm, $request);
 
-/*$lawyerAfterThirdStep = FindCompatibilityHelpMeCriterion($lawyerAfterSecondStep);
+$lawyerAfterThirdStep = FindCompatibilityHelpMeCriterion($lawyerAfterSecondStep);
 
 $lawyerFinal = ChooseTheFinalLawyer($lawyerAfterThirdStep);
 

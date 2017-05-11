@@ -9,7 +9,7 @@
 class ModelCriterion
 {
 
-    public static function getCriterionForm()
+    public static function GetCriterionForm()
     {
 
         $bd = new PDO('mysql:host=localhost;dbname=HelpMe_Avocat;charset=utf8', 'root', '');

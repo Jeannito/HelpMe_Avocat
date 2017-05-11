@@ -96,18 +96,13 @@
                   <select class="browser-default" name="subDomain">
                   <option value="" disabled selected>Choose a domain</option>
                    <?php
-                    /*require_once '../model/model_subDomain.php';
-                    $subDomain = ModelSubDomain::getSubDomain();
+                    require_once '../model/model_subDomain.php';
+                    $subDomain = ModelSubDomain::GetSubDomain();
                     foreach ($subDomain as $oneSubDomain) {
-                    $label = $oneSubDomain -> id;
+                    $label = $oneSubDomain['label'];
                     ?>
                     <option value="<?php echo $label;?>"><?php echo $label;?></option>
-                    <?php } */?>
-                    <option value="Societe">Societe</option>
-                    <option value="Fiscal">Fiscal</option>
-                    <option value="Changement de nom">Changement de nom</option>
-                    <option value="Divorce">Divorce</option>
-                    <option value="I don't care">I don't care</option>
+                    <?php } ?>
                   </select>
               </div>
             </div>
