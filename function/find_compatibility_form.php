@@ -19,7 +19,6 @@ function FindCompatibilityForForm($lawyerObject, $criterionForm, $request) {
 
 	for ($i=0; $i <= $n; $i++) { //retrieve value of each criterion in the request
 		$tabValueCriterion[$i] = $request[$tabCriterion[$i]];
-		$i++;
 	}
 
 	foreach ($lawyerObject as $lawyer) { //loop to calculate the compatibility % for each lawyer
