@@ -2,6 +2,7 @@
 
 class Lawyer{
 
+    private $_id;
 	private $_experience;
   	private $_position;
   	private $_subDomain;
@@ -139,5 +140,35 @@ class Lawyer{
         $this->_finalCompatibility = $finalCompatibility;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->_id;
+    }
 
+    /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->_id = $id;
+    }
+
+    public function get($criterion)
+    {
+        if($criterion == 'gender'){
+           return $this->_gender; 
+        }
+        if($criterion == 'personality'){
+           return $this->_personality; 
+        }
+        if($criterion == 'experience'){
+           return $this->_experience; 
+        }
+        if($criterion == 'position'){
+           return $this->_position; 
+        }
+    }
 }

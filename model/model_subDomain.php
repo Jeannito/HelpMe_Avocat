@@ -36,4 +36,17 @@ class ModelSubDomain
         return $resultat[0];
     }
 
+
+    public function getInformationById($id)
+    {
+
+        $bd = new PDO('mysql:host=localhost;dbname=HelpMe_Avocat;charset=utf8', 'root', '');
+
+        $req = $bd->prepare('SELECT * from subDomain WHERE id = ?');
+
+        $req->execute(array($id));
+
+        return $req->fetch();
+    }
+
 }
