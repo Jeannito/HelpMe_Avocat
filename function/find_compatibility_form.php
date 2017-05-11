@@ -43,6 +43,7 @@ function FindCompatibilityForForm($lawyerObject, $criterionForm, $request) {
 
 		$c = $n*$sum;
 		$lawyer->setFormCompatibility($c);
+		$lawyer->setHelpMeCompatibility(0.5);
 
 	}
 

@@ -12,6 +12,10 @@ require_once '../function/changeInObject.php';
 
 require_once '../function/find_compatibility_form.php';
 
+require_once '../function/choose_the_final_lawyer.php';
+
+require_once '../function/register_choosen_lawyers.php';
+
 $request = ModelRequest::GetRequest($_POST['id_request']);
 
 $subDomain = ModelSubDomain::GetSubDomainByLabel($request['subDomain']);
@@ -20,21 +24,21 @@ $lawyersBySkill = ModelLawyer::getBySubDomain($subDomain['idSubDomain']);
 
 $lawyerObject = ChangeInObject($lawyersBySkill);
 
-echo $lawyerObject[0]->getLastname();
+//echo $lawyerObject[0]->getLastname();
 
 $criterionForm = ModelCriterion::getCriterionForm();
 
 $lawyerAfterSecondStep = FindCompatibilityForForm($lawyerObject, $criterionForm, $request);
 
-echo $lawyerAfterSecondStep[5]->getFormCompatibility();
+//var_dump($lawyerAfterSecondStep);
 
-/*$lawyerAfterThirdStep = FindCompatibilityHelpMeCriterion($lawyerAfterSecondStep);*/
+//$lawyerAfterThirdStep = FindCompatibilityHelpMeCriterion($lawyerAfterSecondStep);
 
-$lawyerFinal = ChooseTheFinalLawyer($lawyerAfterThirdStep);
+$lawyerFinal = ChooseTheFinalLawyer($lawyerAfterSecondStep);
 
-/*ModelLawyer::RegisterTheChoosenLawyers($lawyerFinal);
+RegisterChoosenLawyers($lawyerFinal, $request);
 
-ModelRequest::TreatRequest($_POST['id_request']);
+//ModelRequest::TreatRequest($_POST['id_request']);*/
 
-require_once '../view/request.php';*/
+//require_once '../view/request.php';
 

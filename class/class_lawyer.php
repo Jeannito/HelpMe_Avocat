@@ -13,7 +13,6 @@ class Lawyer{
   	private $_formCompatibility;
   	private $_helpMeCompatibility;
   	private $_finalCompatibility;
-    private $arrayLawyer;
 
     /**
      * @return mixed

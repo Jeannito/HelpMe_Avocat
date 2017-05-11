@@ -8,6 +8,8 @@ function ChooseTheFinalLawyer($lawyerObject) {
 	$lawyerTemp1;
 	$lawyerTemp2;
 
+
+
 	foreach ($lawyerObject as $lawyer) {
 
 		$finalComp = $lawyerObject[$i]->getFormCompatibility() + $lawyerObject[$i]->getHelpMeCompatibility();
@@ -15,7 +17,10 @@ function ChooseTheFinalLawyer($lawyerObject) {
 		$finalComp = $finalComp / 2;
 
 		$lawyerObject[$i]->setFinalCompatibility($finalComp);
+
+		$i++;
 	}
+
 
 	if($lawyerObject[0]->getFinalCompatibility() < $lawyerObject[1]->getFinalCompatibility()){
 		$lawyerTemp = $lawyerObject[0];
@@ -28,7 +33,7 @@ function ChooseTheFinalLawyer($lawyerObject) {
 		$lawyerObject[2] = $lawyerTemp;
 	}
 
-	for ($j=3; $j < count($lawyerObject)-3; $j++){
+	for ($j=3; $j < count($lawyerObject)-4; $j++){
 		if($lawyerObject[0]->getFinalCompatibility() < $lawyerObject[$i]->getFinalCompatibility()){
 			$lawyerTemp = $lawyerObject[0];
 			$lawyerObject[0] = $lawyerObject[$i];
@@ -49,7 +54,8 @@ function ChooseTheFinalLawyer($lawyerObject) {
 			$lawyerObject[3] = $lawyerTemp2;
 		}
 	}
-}
 
+	return $lawyerObject;
+}
 
 ?>
