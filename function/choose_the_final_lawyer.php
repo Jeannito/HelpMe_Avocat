@@ -34,23 +34,23 @@ function ChooseTheFinalLawyer($lawyerObject) {
 	}
 
 	for ($j=3; $j < count($lawyerObject)-4; $j++){
-		if($lawyerObject[0]->getFinalCompatibility() < $lawyerObject[$i]->getFinalCompatibility()){
+		if($lawyerObject[0]->getFinalCompatibility() < $lawyerObject[$j]->getFinalCompatibility()){
 			$lawyerTemp = $lawyerObject[0];
-			$lawyerObject[0] = $lawyerObject[$i];
+			$lawyerObject[0] = $lawyerObject[$j];
 			$lawyerTemp1 = $lawyerObject[1];
 			$lawyerObject[1] = $lawyerTemp;
 			$lawyerTemp2 = $lawyerObject[2];
 			$lawyerObject[2] = $lawyerTemp1;
 			$lawyerObject[3] = $lawyerTemp2;
-		} else if($lawyerObject[1]->getFinalCompatibility() < $lawyerObject[$i]->getFinalCompatibility()){
+		} else if($lawyerObject[1]->getFinalCompatibility() < $lawyerObject[$j]->getFinalCompatibility()){
 			$lawyerTemp1 = $lawyerObject[1];
-			$lawyerObject[1] = $lawyerObject[$i];
+			$lawyerObject[1] = $lawyerObject[$j];
 			$lawyerTemp2 = $lawyerObject[2];
 			$lawyerObject[2] = $lawyerTemp1;
 			$lawyerObject[3] = $lawyerTemp2;
-		} else if($lawyerObject[2]->getFinalCompatibility() < $lawyerObject[$i]->getFinalCompatibility()){
+		} else if($lawyerObject[2]->getFinalCompatibility() < $lawyerObject[$j]->getFinalCompatibility()){
 			$lawyerTemp2 = $lawyerObject[2];
-			$lawyerObject[2] = $lawyerObject[$i];
+			$lawyerObject[2] = $lawyerObject[$j];
 			$lawyerObject[3] = $lawyerTemp2;
 		}
 	}
