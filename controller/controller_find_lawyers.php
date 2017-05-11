@@ -22,13 +22,9 @@ echo $lawyerObject[0]->getLastname();
 
 $criterionForm = ModelCriterion::getCriterionForm();
 
-$criterion = $criterionForm->fetch();
+$lawyerAfterSecondStep = FindCompatibilityForForm($lawyerObject, $criterionForm);
 
-echo $criterionForm['label'];
-
-/*$lawyerAfterSecondStep = FindCompatibilityForForm($lawyerObject, $criterionForm);
-
-$lawyerAfterThirdStep = FindCompatibilityHelpMeCriterion($lawyerAfterSecondStep);
+/*$lawyerAfterThirdStep = FindCompatibilityHelpMeCriterion($lawyerAfterSecondStep);
 
 $lawyerFinal = ChooseTheFinalLawyer($lawyerAfterThirdStep);
 
