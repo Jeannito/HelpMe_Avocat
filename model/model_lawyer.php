@@ -76,7 +76,7 @@ class ModelLawyer
      * @param $id
      * @return mixed
      */
-    public static function getLawyerByRequest($id)
+    public static function getLawyerByRequest($idRequest)
     {
 
         $bd = new PDO('mysql:host=localhost;dbname=HelpMe_Avocat;charset=utf8', 'root', '');

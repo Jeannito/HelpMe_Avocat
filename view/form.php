@@ -93,7 +93,7 @@
             </div>
             <div class="row">
               <div class="input-field col s6">
-                  <select class="browser-default" name="subDomain">
+                  <select class="browser-default" name="subDomain" required>
                   <option value="" disabled selected>Choose a domain</option>
                    <?php
                     require_once '../model/model_subDomain.php';
@@ -113,7 +113,7 @@
               </div>-->
               <div class="row">
                 <div class="input-field col s12">
-                  <button class="btn cyan waves-effect waves-light right" type="submit" name="register_request">Submit
+                  <button class="btn light-blue waves-effect waves-light right" type="submit" name="register_request">Submit
                     <i class="mdi-content-send right"></i>
                   </button>
                 </div>

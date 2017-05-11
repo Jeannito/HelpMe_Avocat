@@ -69,26 +69,30 @@ $user = ModelUser::GetUser($req['idUser']); ?>
   <!-- //////////////////////////////////////////////////////////////////////////// -->
     <div class="section scrollspy" id="work">
     <div class="container">
-        <h4 class="header text_b red-text">Request <?php echo $req['id'];?></h4>
+        <h4 class="header text_b light-blue-text">Request <?php echo $req['id'];?></h4>
+        </br>
         <div class="row">
         <?php 
         require_once '../model/model_lawyer.php';
         $possibleLawyer = ModelLawyer::GetLawyerByRequest($req['id']);
-        foreach ($possiblelawyer as $onepossiblelawyer) {
+        foreach ($possibleLawyer as $onepossiblelawyer) {
             $lawyerInfo = ModelLawyer::GetInformationById($onepossiblelawyer['idLawyer']);
             ?>
-            <div class="col s12 m4 l4">
+            <div class="col s12 m4 16">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
-                      <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light  pink accent-2"><?php echo ($onepossiblelawyer['finalCompatibility']*100);?> % </a>
+                      <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light  light-blue accent-2"><?php echo ($onepossiblelawyer['finalCompatibility']*100);?> % </a>
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4"><?php echo $lawyerInfo['firstname'];?> <?php echo $lawyerInfo['lastname'];?> <i class="mdi-navigation-more-vert right"></i></span>
 
                     </div>
                     <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4"> Information about lawyer<i class="mdi-navigation-close right"></i></span>
-                        <p>Ré-aménager et ré-organiser la disposition des locaux du BDE. L'objectif serait de le rendre plus ouvert aux élèves afin d'en faire un endroit dynamique et convivial.</p>
+                        <span class="card-title grey-text text-darken-4"> Lawyer's information<i class="mdi-navigation-close right"></i></span>
+                        <p>Gender : <?php echo $lawyerInfo['gender'];?></p>
+                        <p>Experience : <?php echo $lawyerInfo['experience'];?></p>
+                        <p>Proximity : <?php echo $lawyerInfo['proximity'];?></p>
+                        <p>Personality : <?php echo $lawyerInfo['personality'];?></p>
                     </div>
                 </div>
             </div>
