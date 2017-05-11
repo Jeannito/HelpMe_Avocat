@@ -104,7 +104,7 @@
                     <option value="<?php echo $label;?>"><?php echo $label;?></option>
                     <?php } */?>
                     <option value="Societe">Societe</option>
-                    <option value="Fiscale">Fiscale</option>
+                    <option value="Fiscal">Fiscal</option>
                     <option value="Changement de nom">Changement de nom</option>
                     <option value="Divorce">Divorce</option>
                     <option value="I don't care">I don't care</option>

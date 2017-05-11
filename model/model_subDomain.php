@@ -9,7 +9,7 @@
 class ModelSubDomain
 {
 
-    public function getSubDomain()
+    public static function GetSubDomain()
     {
 
         $bd = new PDO('mysql:host=localhost;dbname=HelpMe_Avocat;charset=utf8', 'root', '');
@@ -22,7 +22,7 @@ class ModelSubDomain
 
     }
 
-    public function countSubDomain()
+    public static function countSubDomain()
     {
 
         $bd = new PDO('mysql:host=localhost;dbname=HelpMe_Avocat;charset=utf8', 'root', '');
@@ -37,7 +37,7 @@ class ModelSubDomain
     }
 
 
-    public function getInformationById($id)
+    public static function GetInformationById($id)
     {
 
         $bd = new PDO('mysql:host=localhost;dbname=HelpMe_Avocat;charset=utf8', 'root', '');
@@ -49,4 +49,17 @@ class ModelSubDomain
         return $req->fetch();
     }
 
+    public static function GetSubDomainByLabel($label){
+
+    $bd = new PDO('mysql:host=localhost;dbname=HelpMe_Avocat;charset=utf8', 'root', '');
+
+    $req = $bd->prepare('SELECT * FROM subdomain WHERE label = ? ');
+
+    $req->execute(array($label));
+
+    $res = $req -> fetch();
+
+    return $res;
+
+    }
 }

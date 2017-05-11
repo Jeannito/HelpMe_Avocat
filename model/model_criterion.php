@@ -9,7 +9,7 @@
 class ModelCriterion
 {
 
-    public function getCriterionForm()
+    public static function getCriterionForm()
     {
 
         $bd = new PDO('mysql:host=localhost;dbname=HelpMe_Avocat;charset=utf8', 'root', '');
@@ -26,7 +26,7 @@ class ModelCriterion
     /**
      * @return mixed
      */
-    public function countCriterionForm()
+    public static function countCriterionForm()
     {
 
         $bd = new PDO('mysql:host=localhost;dbname=HelpMe_Avocat;charset=utf8', 'root', '');

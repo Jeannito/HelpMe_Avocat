@@ -11,14 +11,14 @@ class ModelLawyer
     /**
      * @param $subDomain it's the sub domain to find the
      */
-    public static function getBySubDomain($subDomain)
+    public static function getBySubDomain($idSubDomain)
     {
 
         $bd = new PDO('mysql:host=localhost;dbname=HelpMe_Avocat;charset=utf8', 'root', '');
 
-        $req = $bd->prepare('SELECT L.name, L. FROM LAWYERS L, SUBDOMAIN S WHERE S.label = ? AND L.idSubDomain = S.id');
+        $req = $bd->prepare('SELECT * FROM lawyers WHERE idSubDomain = ? ');
 
-        $req -> execute(array($subDomain));
+        $req -> execute(array($idSubDomain));
 
         return $req;
 
@@ -29,14 +29,14 @@ class ModelLawyer
      * @param $subDomain
      * @return mixed
      */
-    public static function countBySubDomain($subDomain)
+    public static function countBySubDomain($idSubDomain)
     {
 
         $bd = new PDO('mysql:host=localhost;dbname=HelpMe_Avocat;charset=utf8', 'root', '');
 
-        $req = $bd->prepare('SELECT COUNT(*) FROM LAWYERS  WHERE email = ? ');
+        $req = $bd->prepare('SELECT COUNT(*) FROM lawyers  WHERE idSubDomain = ? ');
 
-        $req -> execute(array($subDomain));
+        $req -> execute(array($idSubDomain));
 
         $resultat = $req->fetch();
 

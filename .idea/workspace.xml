@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76b0fce3-4900-4040-b7d1-067c2e7f2d59" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ algorithm/class_lawyer.php" afterPath="$PROJECT_DIR$/ algorithm/class_lawyer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ algorithm/function/changeInObject.php" afterPath="$PROJECT_DIR$/ algorithm/function/changeInObject.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ algorithm/class/class_lawyer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ algorithm/function/changeInObject.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ algorithm/function/choose_the_final_lawyer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ algorithm/function/find_compatibility_form.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ algorithm/function/find_compatibility_helpme_criterion.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/controller_find_lawyers.php" afterPath="$PROJECT_DIR$/controller/controller_find_lawyers.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/model_criterion.php" afterPath="$PROJECT_DIR$/model/model_criterion.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/model_lawyer.php" afterPath="$PROJECT_DIR$/model/model_lawyer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/model_subDomain.php" afterPath="$PROJECT_DIR$/model/model_subDomain.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/form.php" afterPath="$PROJECT_DIR$/view/form.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,48 +24,16 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="model_criterion.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/model_criterion.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="33" column="29" lean-forward="false" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
-              <folding>
-                <marker date="1493899579909" expanded="true" signature="284:312" ph="SELECT * FRO... criterion_form" />
-                <marker date="1493899579909" expanded="true" signature="583:618" ph="SELECT COUNT... criterion_form" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="controller_find_lawyers.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controller/controller_find_lawyers.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="11" lean-forward="false" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="class_lawyer.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ algorithm/class_lawyer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2363">
-              <caret line="145" column="20" lean-forward="false" selection-start-line="145" selection-start-column="20" selection-end-line="145" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="model_lawyer.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="model_lawyer.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/model_lawyer.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1494342250836" expanded="true" signature="361:402" ph="SELECT * FRO... LAWYERS" />
-                <marker date="1494342250836" expanded="true" signature="724:745" ph="SELECT COUNT... AVOCATS" />
-                <marker date="1494342250836" expanded="true" signature="1143:1157" ph="SELECT * fro... AVOCATS" />
+                <marker date="1494428382318" expanded="true" signature="370:413" ph="SELECT * FRO... lawyers" />
+                <marker date="1494428382318" expanded="true" signature="746:797" ph="SELECT COUNT... lawyers" />
+                <marker date="1494428382318" expanded="true" signature="1160:1194" ph="SELECT * fro... LAWYERS" />
+                <marker date="1494428382318" expanded="true" signature="1180:1194" ph="SELECT * fro... AVOCATS" />
               </folding>
             </state>
           </provider>
@@ -71,9 +45,9 @@
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1493904467287" expanded="true" signature="278:435" ph="INSERT INTO request... " />
-                <marker date="1493904467287" expanded="true" signature="635:656" ph="SELECT * FRO... request" />
-                <marker date="1493904467287" expanded="true" signature="883:917" ph="SELECT * FRO... request" />
+                <marker date="1494427962471" expanded="true" signature="278:435" ph="INSERT INTO request... " />
+                <marker date="1494427962471" expanded="true" signature="635:656" ph="SELECT * FRO... request" />
+                <marker date="1494427962471" expanded="true" signature="883:917" ph="SELECT * FRO... request" />
               </folding>
             </state>
           </provider>
@@ -89,8 +63,9 @@
       <list>
         <option value="$PROJECT_DIR$/model/model_criterion.php" />
         <option value="$PROJECT_DIR$/model/model_subDomain.php" />
-        <option value="$PROJECT_DIR$/controller/controller_find_lawyers.php" />
         <option value="$PROJECT_DIR$/ algorithm/class_lawyer.php" />
+        <option value="$PROJECT_DIR$/controller/controller_find_lawyers.php" />
+        <option value="$PROJECT_DIR$/class/class_lawyer.php" />
       </list>
     </option>
   </component>
@@ -194,7 +169,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value=" algorithm" />
+              <option name="myItemId" value="class" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -301,25 +276,27 @@
       <updated>1493897784542</updated>
       <workItem from="1493897787313" duration="2715000" />
       <workItem from="1493973316510" duration="1880000" />
+      <workItem from="1494429687503" duration="682000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4595000" />
+    <option name="totallyTimeSpent" value="5277000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2489019" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -342,69 +319,12 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/model/model_criterion.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1493899579909" expanded="true" signature="284:312" ph="SELECT * FRO... criterion_form" />
-            <marker date="1493899579909" expanded="true" signature="583:618" ph="SELECT COUNT... criterion_form" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/model_request.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1493904467287" expanded="true" signature="278:435" ph="INSERT INTO request... " />
-            <marker date="1493904467287" expanded="true" signature="635:656" ph="SELECT * FRO... request" />
-            <marker date="1493904467287" expanded="true" signature="883:917" ph="SELECT * FRO... request" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/model_subDomain.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="23" column="4" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
-          <folding>
-            <marker date="1494341892405" expanded="true" signature="280:303" ph="SELECT * FRO... subdomain" />
-            <marker date="1494341892405" expanded="true" signature="532:562" ph="SELECT COUNT... subdomain" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/model_request.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1493904467287" expanded="true" signature="278:435" ph="INSERT INTO request... " />
-            <marker date="1493904467287" expanded="true" signature="635:656" ph="SELECT * FRO... request" />
-            <marker date="1493904467287" expanded="true" signature="883:917" ph="SELECT * FRO... request" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/model_criterion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
+        <state relative-caret-position="561">
           <caret line="33" column="29" lean-forward="false" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
           <folding>
-            <marker date="1493899579909" expanded="true" signature="284:312" ph="SELECT * FRO... criterion_form" />
-            <marker date="1493899579909" expanded="true" signature="583:618" ph="SELECT COUNT... criterion_form" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/model_lawyer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1494342250836" expanded="true" signature="361:402" ph="SELECT * FRO... LAWYERS" />
-            <marker date="1494342250836" expanded="true" signature="724:745" ph="SELECT COUNT... AVOCATS" />
-            <marker date="1494342250836" expanded="true" signature="1143:1157" ph="SELECT * fro... AVOCATS" />
+            <marker date="1494428507308" expanded="true" signature="111:738" ph="{...}" />
+            <marker date="1494428507308" expanded="true" signature="466:735" ph="{...}" />
+            <marker date="1494428507308" expanded="true" signature="597:632" ph="SELECT COUNT... criterion_form" />
           </folding>
         </state>
       </provider>
@@ -417,11 +337,129 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/model/model_lawyer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1494428382318" expanded="true" signature="370:413" ph="SELECT * FRO... lawyers" />
+            <marker date="1494428382318" expanded="true" signature="746:797" ph="SELECT COUNT... lawyers" />
+            <marker date="1494428382318" expanded="true" signature="1160:1194" ph="SELECT * fro... LAWYERS" />
+            <marker date="1494428382318" expanded="true" signature="1180:1194" ph="SELECT * fro... AVOCATS" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/model_request.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1494427962471" expanded="true" signature="278:435" ph="INSERT INTO request... " />
+            <marker date="1494427962471" expanded="true" signature="635:656" ph="SELECT * FRO... request" />
+            <marker date="1494427962471" expanded="true" signature="883:917" ph="SELECT * FRO... request" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ algorithm/class_lawyer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2363">
+        <state relative-caret-position="2465">
           <caret line="145" column="20" lean-forward="false" selection-start-line="145" selection-start-column="20" selection-end-line="145" selection-end-column="20" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/model_criterion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1494428507308" expanded="true" signature="111:738" ph="{...}" />
+            <marker date="1494428507308" expanded="true" signature="466:735" ph="{...}" />
+            <marker date="1494428507308" expanded="true" signature="597:632" ph="SELECT COUNT... criterion_form" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/model_request.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1494427962471" expanded="true" signature="278:435" ph="INSERT INTO request... " />
+            <marker date="1494427962471" expanded="true" signature="635:656" ph="SELECT * FRO... request" />
+            <marker date="1494427962471" expanded="true" signature="883:917" ph="SELECT * FRO... request" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/model_subDomain.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="23" column="4" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/model_request.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1494427962471" expanded="true" signature="278:435" ph="INSERT INTO request... " />
+            <marker date="1494427962471" expanded="true" signature="635:656" ph="SELECT * FRO... request" />
+            <marker date="1494427962471" expanded="true" signature="883:917" ph="SELECT * FRO... request" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/model_criterion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="29" lean-forward="false" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+          <folding>
+            <marker date="1494428507308" expanded="true" signature="111:738" ph="{...}" />
+            <marker date="1494428507308" expanded="true" signature="466:735" ph="{...}" />
+            <marker date="1494428507308" expanded="true" signature="597:632" ph="SELECT COUNT... criterion_form" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ algorithm/class_lawyer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2465">
+          <caret line="145" column="20" lean-forward="false" selection-start-line="145" selection-start-column="20" selection-end-line="145" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/controller_find_lawyers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="28" column="11" lean-forward="false" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class/class_lawyer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/model_lawyer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1494428382318" expanded="true" signature="370:413" ph="SELECT * FRO... lawyers" />
+            <marker date="1494428382318" expanded="true" signature="746:797" ph="SELECT COUNT... lawyers" />
+            <marker date="1494428382318" expanded="true" signature="1160:1194" ph="SELECT * fro... LAWYERS" />
+            <marker date="1494428382318" expanded="true" signature="1180:1194" ph="SELECT * fro... AVOCATS" />
+          </folding>
         </state>
       </provider>
     </entry>

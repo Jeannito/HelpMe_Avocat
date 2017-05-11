@@ -3,6 +3,8 @@
 class Lawyer{
 
     private $_id;
+    private $_firstname;
+    private $_lastname;
 	private $_experience;
   	private $_position;
   	private $_subDomain;
@@ -11,6 +13,7 @@ class Lawyer{
   	private $_formCompatibility;
   	private $_helpMeCompatibility;
   	private $_finalCompatibility;
+    private $arrayLawyer;
 
     /**
      * @return mixed
@@ -170,5 +173,37 @@ class Lawyer{
         if($criterion == 'position'){
            return $this->_position; 
         }
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFirstname()
+    {
+        return $this->_firstname;
+    }
+
+    /**
+     * @param mixed $firstname
+     */
+    public function setFirstname($firstname)
+    {
+        $this->_firstname = $firstname;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLastname()
+    {
+        return $this->_lastname;
+    }
+
+    /**
+     * @param mixed $lastname
+     */
+    public function setLastname($lastname)
+    {
+        $this->_lastname = $lastname;
     }
 }
