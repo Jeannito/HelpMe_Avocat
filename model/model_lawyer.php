@@ -26,11 +26,11 @@ class ModelLawyer
 
    public static function RegisterTheChoosenLawyer($tab){
 
-    $bd = new PDO('mysql:host=localhost;dbname=HelpMe_Avocat;charset=utf8', 'root', '');
+        $bd = new PDO('mysql:host=localhost;dbname=HelpMe_Avocat;charset=utf8', 'root', '');
 
-    $req = $bd->prepare('INSERT INTO possible_lawyers(idRequest, idLawyer, formCompatibility, helpmeCompatibility, finalCompatibility) VALUES( :idRequest, :idLawyer, :formCompatibility, :helpmeCompatibility, :finalCompatibility)');
+        $req = $bd->prepare('INSERT INTO possible_lawyers(idRequest, idLawyer, formCompatibility, helpmeCompatibility, finalCompatibility) VALUES( :idRequest, :idLawyer, :formCompatibility, :helpmeCompatibility, :finalCompatibility)');
 
-    $req->execute($tab);
+        $req->execute($tab);
     
     }
 
@@ -60,7 +60,7 @@ class ModelLawyer
      * @param $id
      * @return mixed
      */
-    public static function getInformationById($id)
+    public static function GetInformationById($id)
     {
 
         $bd = new PDO('mysql:host=localhost;dbname=HelpMe_Avocat;charset=utf8', 'root', '');

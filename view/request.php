@@ -69,53 +69,30 @@ $user = ModelUser::GetUser($req['idUser']); ?>
   <!-- //////////////////////////////////////////////////////////////////////////// -->
     <div class="section scrollspy" id="work">
     <div class="container">
-        <h4 class="header text_b red-text">Request 1 </h4>
+        <h4 class="header text_b red-text">Request <?php echo $req['id'];?></h4>
         <div class="row">
+        <?php 
+        require_once '../model/model_lawyer.php';
+        $possibleLawyer = ModelLawyer::GetLawyerByRequest($req['id']);
+        foreach ($possiblelawyer as $onepossiblelawyer) {
+            $lawyerInfo = ModelLawyer::GetInformationById($onepossiblelawyer['idLawyer']);
+            ?>
             <div class="col s12 m4 l4">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
-                      <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light  pink accent-2">56 %</a>
+                      <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light  pink accent-2"><?php echo ($onepossiblelawyer['finalCompatibility']*100);?> % </a>
                     </div>
                     <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Erick Taru <i class="mdi-navigation-more-vert right"></i></span>
+                        <span class="card-title activator grey-text text-darken-4"><?php echo $lawyerInfo['firstname'];?> <?php echo $lawyerInfo['lastname'];?> <i class="mdi-navigation-more-vert right"></i></span>
 
                     </div>
                     <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4"> Réhabilitation des locaux du BDE <i class="mdi-navigation-close right"></i></span>
+                        <span class="card-title grey-text text-darken-4"> Information about lawyer<i class="mdi-navigation-close right"></i></span>
                         <p>Ré-aménager et ré-organiser la disposition des locaux du BDE. L'objectif serait de le rendre plus ouvert aux élèves afin d'en faire un endroit dynamique et convivial.</p>
                     </div>
                 </div>
             </div>
-            <div class="col s12 m4 l4">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                    <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light  pink accent-2">56 %</a>
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Jean Bruté de Rémur <i class="mdi-navigation-more-vert right"></i></span>
-
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Dissociation BDA/BDE <i class="mdi-navigation-close right"></i></span>
-                        <p>Dissocier le BDA du BDE afin de laisser plus de responsabilité et de liberté aux différents clubs qui le composent. L'avantage serait qu'il puisse disposer de son propre budget afin de mener à bien de plus gros projets.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m4 l4">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                    <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light  pink accent-2">56 %</a>
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Samuel Orru<i class="mdi-navigation-more-vert right"></i></span>
-
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Création d'une Team chargée de créer des petits événements <i class="mdi-navigation-close right"></i></span>
-                        <p>Le but de la team petit évent serait de dynamiser les périodes entre chaque grand rendez-vous, en organisant des petits événements (ex: petit dejeuner, repas, tournois).</p>
-                    </div>
-                </div>
-            </div>
+            <?php } ?>
         </div>
     </div>
 </div>
