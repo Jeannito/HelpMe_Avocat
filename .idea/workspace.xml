@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="76b0fce3-4900-4040-b7d1-067c2e7f2d59" name="Default" comment="Merge branch 'master' of https://github.com/Jeannito/HelpMe_Avocat&#10;&#10;# Conflicts:&#10;#&#9;controller/controller_find_lawyers.php">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/class/class_lawyer.php" afterPath="$PROJECT_DIR$/class/class_lawyer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/controller_find_lawyers.php" afterPath="$PROJECT_DIR$/controller/controller_find_lawyers.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/controller_user_profile.php" afterPath="$PROJECT_DIR$/controller/controller_user_profile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/function/find_compatibility_form.php" afterPath="$PROJECT_DIR$/function/find_compatibility_form.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -270,12 +267,12 @@
       <updated>1493897784542</updated>
       <workItem from="1493897787313" duration="2715000" />
       <workItem from="1493973316510" duration="1880000" />
-      <workItem from="1494429687503" duration="884000" />
+      <workItem from="1494429687503" duration="1137000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5479000" />
+    <option name="totallyTimeSpent" value="5732000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />

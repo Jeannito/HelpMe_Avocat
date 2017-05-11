@@ -26,13 +26,13 @@ $criterionForm = ModelCriterion::getCriterionForm();
 
 $lawyerAfterSecondStep = FindCompatibilityForForm($lawyerObject, $criterionForm, $request);
 
-$lawyerAfterThirdStep = FindCompatibilityHelpMeCriterion($lawyerAfterSecondStep);
+echo $lawyerAfterSecondStep[5]->getFormCompatibility();
 
-echo $lawyerObject[2]->getFormCompatibility();
+/*$lawyerAfterThirdStep = FindCompatibilityHelpMeCriterion($lawyerAfterSecondStep);*/
 
 $lawyerFinal = ChooseTheFinalLawyer($lawyerAfterThirdStep);
 
-ModelLawyer::RegisterTheChoosenLawyers($lawyerFinal);
+/*ModelLawyer::RegisterTheChoosenLawyers($lawyerFinal);
 
 ModelRequest::TreatRequest($_POST['id_request']);
 
