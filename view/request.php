@@ -84,7 +84,7 @@ $user = ModelUser::GetUser($req['idUser']); ?>
             <div class="col s12 m4 16">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
-                      <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light  light-blue accent-2"><?php echo ($onepossiblelawyer['finalCompatibility']*100);?> % </a>
+                      <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light  light-blue accent-2"><?php echo ($format = number_format($onepossiblelawyer['finalCompatibility']*100, 2));?> % </a>
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4"><?php echo $lawyerInfo['firstname'];?> <?php echo $lawyerInfo['lastname'];?> <i class="mdi-navigation-more-vert right"></i></span>
