@@ -40,4 +40,31 @@ class ModelCriterion
         return $resultat[0];
     }
 
+    public static function ChangeCriterionCoeff($experience, $personality, $gender, $position)
+    {
+
+        $bd = new PDO('mysql:host=localhost;dbname=HelpMe_Avocat;charset=utf8', 'root', '');
+
+        $req = $bd->prepare('UPDATE criterion_form SET coefficient = ? WHERE name = "experience"');
+
+        $req -> execute(array($experience));
+
+        $req = $bd->prepare('UPDATE criterion_form SET coefficient = ? WHERE name = "gender"');
+
+        $req -> execute(array($gender));
+
+        $req = $bd->prepare('UPDATE criterion_form SET coefficient = ? WHERE name = "personality"');
+
+        $req -> execute(array($personality));
+
+        $req = $bd->prepare('UPDATE criterion_form SET coefficient = ? WHERE name = "proximity"');
+
+        $req -> execute(array($position));
+
+
+        return $req;
+
+    }
+
+
 }

@@ -1,5 +1,5 @@
 <head>
-  <title>New request</title>
+  <title>HelpMe Avocats</title>
 
   <!-- Favicons-->
   <link rel="icon" type="image/jpg" href="../images/h.jpg" />

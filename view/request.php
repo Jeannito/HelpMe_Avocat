@@ -45,10 +45,10 @@ $user = ModelUser::GetUser($req['idUser']); ?>
                 <td><?php echo $user['firstname'];?></td>
                 <td><?php echo $user['lastname'];?></td>
                 <td><?php echo $req['subDomain'];?></td>
-                <td><?php echo $req['gender'];;?></td>
-                <td><?php echo $req['personality'];;?></td>
-                <td><?php echo $req['position'];;?></td>
-                <td><?php echo $req['experience'];;?></td>
+                <td><?php echo $req['gender'];?></td>
+                <td><?php echo $req['personality'];?></td>
+                <td><?php echo $req['position'];?></td>
+                <td><?php echo $req['experience'];?></td>
                 <?php if($req['isTreated'] == 0 ){ ?>
                 <td>
                 <form action="../controller/controller_find_lawyers.php"  name="profil" role="form" class="form-horizontal" method="post" accept-charset="utf-8">
@@ -66,6 +66,9 @@ $user = ModelUser::GetUser($req['idUser']); ?>
 
 <?php } else {
 ?>
+    </br>
+    <p class="center">The time for the execution is <?php echo $req['executionTime'];?> secondes</p>
+    </br>
   <!-- //////////////////////////////////////////////////////////////////////////// -->
     <div class="section scrollspy" id="work">
     <div class="container">

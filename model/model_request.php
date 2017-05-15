@@ -53,4 +53,14 @@ class ModelRequest
     $req->execute(array($id));
 
     }
+
+    public static function AddExecutionTime($tab){
+
+    $bd = new PDO('mysql:host=localhost;dbname=HelpMe_Avocat;charset=utf8', 'root', '');
+
+    $req = $bd->prepare('UPDATE request SET executionTime = :executionTime WHERE id = :id ');
+
+    $req->execute($tab);
+
+    }
 }

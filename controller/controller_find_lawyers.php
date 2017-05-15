@@ -1,5 +1,7 @@
 <?php
 
+$timestamp_debut = microtime(true);
+
 require_once '../model/model_request.php';
 
 require_once '../model/model_lawyer.php';
@@ -39,6 +41,17 @@ $lawyerFinal = ChooseTheFinalLawyer($lawyerAfterSecondStep);
 RegisterChoosenLawyers($lawyerFinal, $request);
 
 ModelRequest::TreatRequest($_POST['id_request']);
+
+$timestamp_fin = microtime(true);
+
+$difference_ms = $timestamp_fin - $timestamp_debut;
+
+$tab = array(
+	'executionTime' => $difference_ms,
+	'id' => $_POST['id_request']
+	);
+
+ModelRequest::AddExecutionTime($tab);
 
 require_once '../view/request.php';
 
