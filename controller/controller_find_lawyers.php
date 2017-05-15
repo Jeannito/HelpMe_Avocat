@@ -14,6 +14,8 @@ require_once '../function/changeInObject.php';
 
 require_once '../function/find_compatibility_form.php';
 
+require_once '../function/find_compatibility_helpme_criterion.php';
+
 require_once '../function/choose_the_final_lawyer.php';
 
 require_once '../function/register_choosen_lawyers.php';
@@ -26,15 +28,14 @@ $lawyersBySkill = ModelLawyer::getBySubDomain($subDomain['idSubDomain']);
 
 $lawyerObject = ChangeInObject($lawyersBySkill);
 
-//echo $lawyerObject[0]->getLastname();
-
 $criterionForm = ModelCriterion::getCriterionForm();
 
 $lawyerAfterSecondStep = FindCompatibilityForForm($lawyerObject, $criterionForm, $request);
 
-//var_dump($lawyerAfterSecondStep);
+$criterionHelpMe = ModelCriterion::getCriterionHelpMe();
 
-//$lawyerAfterThirdStep = FindCompatibilityHelpMeCriterion($lawyerAfterSecondStep);
+$lawyerAfterThirdStep = FindCompatibilityHelpMeCriterion($lawyerAfterSecondStep, $criterionHelpMe, $request);
+
 
 $lawyerFinal = ChooseTheFinalLawyer($lawyerAfterSecondStep);
 

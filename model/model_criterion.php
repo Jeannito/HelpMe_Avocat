@@ -22,6 +22,20 @@ class ModelCriterion
 
     }
 
+    public static function GetCriterionHelpMe()
+    {
+
+        $bd = new PDO('mysql:host=localhost;dbname=HelpMe_Avocat;charset=utf8', 'root', '');
+
+        $req = $bd->prepare('SELECT * FROM criterion_helpme');
+
+        $req -> execute();
+
+        return $req;
+
+    }
+
+
 
     /**
      * @return mixed
@@ -40,7 +54,7 @@ class ModelCriterion
         return $resultat[0];
     }
 
-    public static function ChangeCriterionCoeff($experience, $personality, $gender, $position)
+    public static function ChangeCriterionFormCoeff($experience, $personality, $gender, $position)
     {
 
         $bd = new PDO('mysql:host=localhost;dbname=HelpMe_Avocat;charset=utf8', 'root', '');
@@ -60,6 +74,32 @@ class ModelCriterion
         $req = $bd->prepare('UPDATE criterion_form SET coefficient = ? WHERE name = "proximity"');
 
         $req -> execute(array($position));
+
+
+        return $req;
+
+    }
+
+        public static function ChangeCriterionHelpMeCoeff($rating, $point, $cases, $revenue)
+    {
+
+        $bd = new PDO('mysql:host=localhost;dbname=HelpMe_Avocat;charset=utf8', 'root', '');
+
+        $req = $bd->prepare('UPDATE criterion_helpme SET coefficient = ? WHERE name = "rating"');
+
+        $req -> execute(array($rating));
+
+        $req = $bd->prepare('UPDATE criterion_helpme SET coefficient = ? WHERE name = "point"');
+
+        $req -> execute(array($point));
+
+        $req = $bd->prepare('UPDATE criterion_helpme SET coefficient = ? WHERE name = "cases"');
+
+        $req -> execute(array($cases));
+
+        $req = $bd->prepare('UPDATE criterion_helpme SET coefficient = ? WHERE name = "revenue"');
+
+        $req -> execute(array($revenue));
 
 
         return $req;

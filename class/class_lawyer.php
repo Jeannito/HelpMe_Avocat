@@ -10,6 +10,10 @@ class Lawyer{
   	private $_subDomain;
   	private $_gender;
   	private $_personality;
+  	private $_point;
+  	private $_rating;
+  	private $_revenue;
+  	private $_cases;
   	private $_formCompatibility;
   	private $_helpMeCompatibility;
   	private $_finalCompatibility;
@@ -205,5 +209,69 @@ class Lawyer{
     public function setLastname($lastname)
     {
         $this->_lastname = $lastname;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPoint()
+    {
+        return $this->_point;
+    }
+
+    /**
+     * @param mixed $point
+     */
+    public function setPoint($point)
+    {
+        $this->_point = $point;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRating()
+    {
+        return $this->_rating;
+    }
+
+    /**
+     * @param mixed $rating
+     */
+    public function setRating($rating)
+    {
+        $this->_rating = $rating;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRevenue()
+    {
+        return $this->_revenue;
+    }
+
+    /**
+     * @param mixed $revenue
+     */
+    public function setRevenue($revenue)
+    {
+        $this->_revenue = $revenue;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCases()
+    {
+        return $this->_cases;
+    }
+
+    /**
+     * @param mixed $cases
+     */
+    public function setCases($cases)
+    {
+        $this->_cases = $cases;
     }
 }

@@ -1,27 +1,38 @@
 <?php
 
-require_once '../model/model_criterion.php';
+if($_POST['type'] == 'form'){
 
-$experience = $_POST['experience'];
+	require_once '../model/model_criterion.php';
 
-$personality = $_POST['personality'];
+	$experience = $_POST['experience'];
 
-$gender = $_POST['gender'];
+	$personality = $_POST['personality'];
 
-$position = $_POST['position'];
+	$gender = $_POST['gender'];
 
-$tab = array(
+	$position = $_POST['position'];
 
-	'experience' => htmlspecialchars($experience),
+	ModelCriterion::ChangeCriterionFormCoeff($experience, $personality, $gender, $position);
 
-	'personality' => htmlspecialchars($personality),
+	header('Location: ../controller/controller_manage_algo.php');
 
-	'gender' => htmlspecialchars($gender),
+} else if ($_POST['type'] == 'helpme'){
 
-	'position' => htmlspecialchars($position)
-);
+	require_once '../model/model_criterion.php';
 
-ModelCriterion::ChangeCriterionCoeff($experience, $personality, $gender, $position);
+	$rating = $_POST['rating'];
 
-header('Location: ../controller/controller_manage_algo.php');
+	$point = $_POST['point'];
+
+	$revenue = $_POST['revenue'];
+
+	$cases = $_POST['cases'];
+
+	ModelCriterion::ChangeCriterionHelpMeCoeff($rating, $point, $cases, $revenue);
+
+	header('Location: ../controller/controller_manage_algo.php');
+
+}
+
+
 

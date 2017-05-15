@@ -88,4 +88,46 @@ class ModelLawyer
         return $req;
     }
 
+    public static function GetMaxPoint($idSubDomain)
+    {
+
+        $bd = new PDO('mysql:host=localhost;dbname=HelpMe_Avocat;charset=utf8', 'root', '');
+
+        $req = $bd->prepare('SELECT MAX(point) from lawyers WHERE  idSubDomain = ?');
+
+        $req->execute(array($idSubDomain));
+
+        $resultat = $req->fetch();
+
+        return $resultat[0];
+    }
+
+    public static function GetMaxRevenue($idSubDomain)
+    {
+
+        $bd = new PDO('mysql:host=localhost;dbname=HelpMe_Avocat;charset=utf8', 'root', '');
+
+        $req = $bd->prepare('SELECT MAX(revenue) from lawyers WHERE  idSubDomain = ?');
+
+        $req->execute(array($idSubDomain));
+
+        $resultat = $req->fetch();
+
+        return $resultat[0];
+    }
+
+    public static function GetMaxCases($idSubDomain)
+    {
+
+        $bd = new PDO('mysql:host=localhost;dbname=HelpMe_Avocat;charset=utf8', 'root', '');
+
+        $req = $bd->prepare('SELECT MAX(cases) from lawyers WHERE  idSubDomain = ?');
+
+        $req->execute(array($idSubDomain));
+
+        $resultat = $req->fetch();
+
+        return $resultat[0];
+    }
+
 }

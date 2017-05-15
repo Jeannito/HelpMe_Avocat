@@ -17,6 +17,11 @@ function ChangeInObject($lawyers) {
 	  $proximity = $lawyer['proximity'];
 	  $personality = $lawyer['personality'];
 	  $idSubDomain = $lawyer['idSubDomain'];
+	  $point = $lawyer['point'];
+	  $rating = $lawyer['rating'];
+	  $revenue = $lawyer['revenue'];
+	  $cases = $lawyer['cases'];
+
 
 	  $reqId = ModelSubDomain::GetInformationById($idSubDomain);
 
@@ -32,6 +37,10 @@ function ChangeInObject($lawyers) {
 	  $theLawyer->setPosition($proximity);
 	  $theLawyer->setPersonality($personality);
 	  $theLawyer->setSubDomain($subDomain);
+	  $theLawyer->setPoint($point);
+	  $theLawyer->setRating($rating);
+	  $theLawyer->setRevenue($revenue);
+	  $theLawyer->setCases($cases);
 
 	  /*array_push($lawyerArray, $theLawyer);*/
 
