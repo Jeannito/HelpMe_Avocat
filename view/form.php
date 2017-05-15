@@ -73,6 +73,15 @@
               <div class="input-field col s6">
                   <select class="browser-default" name="position" required>
                     <option value="" disabled selected>Lawyer position</option>
+                    <?php /*
+                    require_once '../model/model_departement.php';
+                    $departements = ModelDepartement::GetDepartement();
+                    foreach ($departements as $departement) {
+                    $name = $departement['departement_nom'];
+                    $code = $departement['departement_code'];
+                    ?>
+                    <option value="<?php echo $name;?>"><?php echo $name;?>(<?php echo $code;?>)</option>
+                    <?php } */?>
                     <option value="bourg">Bour-en-Bresse (01)</option>
                     <option value="laon">Laon (02)</option>
                     <option value="moulins">Moulins (03)</option>
