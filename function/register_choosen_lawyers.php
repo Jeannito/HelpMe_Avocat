@@ -11,6 +11,8 @@ function RegisterChoosenLawyers($lawyerObject, $request) {
 		$helpmeCompatibility = $lawyerObject[$i]->getHelpMeCompatibility();
 		$finalCompatibility = $lawyerObject[$i]->getFinalCompatibility();
 		$idRequest = $request['id'];
+		$executionNumber = $request['numberOfExecution'];
+		$datetime = date("Y-m-d H:i:s");
 
 		$tab = array(
 
@@ -22,7 +24,11 @@ function RegisterChoosenLawyers($lawyerObject, $request) {
 
 			'helpmeCompatibility' => htmlspecialchars($helpmeCompatibility),
 
-			'finalCompatibility' => htmlspecialchars($finalCompatibility)
+			'finalCompatibility' => htmlspecialchars($finalCompatibility),
+
+			'executionNumber' => $executionNumber,
+
+			'executionDate' => $datetime
 		);
 
 		ModelLawyer::RegisterTheChoosenLawyer($tab);

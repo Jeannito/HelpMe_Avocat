@@ -16,6 +16,8 @@ class ModelRequest
     $req = $bd->prepare('INSERT INTO request(gender, experience, position, personality, subDomain, idUser) VALUES( :gender, :experience, :position, :personality, :subDomain, :idUser)');
 
     $req->execute($tab);
+
+    var_dump($req);
     
     }
 
@@ -61,6 +63,16 @@ class ModelRequest
     $req = $bd->prepare('UPDATE request SET executionTime = :executionTime WHERE id = :id ');
 
     $req->execute($tab);
+
+    }
+
+    public static function ChangerNumberOfExecution($id){
+
+    $bd = new PDO('mysql:host=localhost;dbname=HelpMe_Avocat;charset=utf8', 'root', '');
+
+    $req = $bd->prepare('UPDATE request SET numberOfExecution = numberOfExecution + 1 WHERE id = ? ');
+
+    $req->execute(array($id));
 
     }
 }

@@ -36,8 +36,11 @@ $criterionHelpMe = ModelCriterion::getCriterionHelpMe();
 
 $lawyerAfterThirdStep = FindCompatibilityHelpMeCriterion($lawyerAfterSecondStep, $criterionHelpMe, $request);
 
-
 $lawyerFinal = ChooseTheFinalLawyer($lawyerAfterSecondStep);
+
+ModelRequest::ChangerNumberOfExecution($_POST['id_request']);
+
+$request = ModelRequest::GetRequest($_POST['id_request']);
 
 RegisterChoosenLawyers($lawyerFinal, $request);
 

@@ -73,15 +73,6 @@
               <div class="input-field col s6">
                   <select class="browser-default" name="position" required>
                     <option value="" disabled selected>Lawyer position</option>
-                    <?php /*
-                    require_once '../model/model_departement.php';
-                    $departements = ModelDepartement::GetDepartement();
-                    foreach ($departements as $departement) {
-                    $name = $departement['departement_nom'];
-                    $code = $departement['departement_code'];
-                    ?>
-                    <option value="<?php echo $name;?>"><?php echo $name;?>(<?php echo $code;?>)</option>
-                    <?php } */?>
                     <option value="bourg">Bour-en-Bresse (01)</option>
                     <option value="laon">Laon (02)</option>
                     <option value="moulins">Moulins (03)</option>
@@ -187,8 +178,8 @@
                   <select class="browser-default" name="experience" required>
                     <option value="" disabled selected>Lawyer experience</option>
                     <option value="Less than 3 years">Less than 3 years</option>
-                    <option value="Between 3 and 5 years">Between 3 and 8 years</option>
-                    <option value="More than 5 years">More than 8 years</option>
+                    <option value="Between 3 and 5 years">Between 3 and 5 years</option>
+                    <option value="More than 5 years">More than 5 years</option>
                     <option value="I don't care">I don't care</option>
                   </select>
               </div>

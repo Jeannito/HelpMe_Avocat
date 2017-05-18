@@ -28,7 +28,7 @@ class ModelLawyer
 
         $bd = new PDO('mysql:host=localhost;dbname=HelpMe_Avocat;charset=utf8', 'root', '');
 
-        $req = $bd->prepare('INSERT INTO possible_lawyers(idRequest, idLawyer, formCompatibility, helpmeCompatibility, finalCompatibility) VALUES( :idRequest, :idLawyer, :formCompatibility, :helpmeCompatibility, :finalCompatibility)');
+        $req = $bd->prepare('INSERT INTO possible_lawyers(idRequest, idLawyer, formCompatibility, helpmeCompatibility, finalCompatibility, executionNumber, executionDate) VALUES( :idRequest, :idLawyer, :formCompatibility, :helpmeCompatibility, :finalCompatibility, :executionNumber, :executionDate)');
 
         $req->execute($tab);
     
@@ -128,6 +128,20 @@ class ModelLawyer
         $resultat = $req->fetch();
 
         return $resultat[0];
+    }
+
+    public static function GetExecutionDate($tab)
+    {
+
+        $bd = new PDO('mysql:host=localhost;dbname=HelpMe_Avocat;charset=utf8', 'root', '');
+
+        $req = $bd->prepare('SELECT * from possible_lawyers WHERE  idRequest = :idRequest AND executionNumber = :executionNumber');
+
+        $req->execute($tab);
+
+        $resultat = $req->fetch();
+
+        return $resultat;
     }
 
 }

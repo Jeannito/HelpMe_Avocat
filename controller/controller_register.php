@@ -20,6 +20,8 @@ $personality = $_POST['personality'];
 
 $subDomain = $_POST['subDomain'];
 
+var_dump($_POST);
+
 $tabUser = array(
 
 	'lastname' => htmlspecialchars($lastname),
@@ -28,7 +30,7 @@ $tabUser = array(
 
 	);
 
-ModelUser::RegisterUser($tabUser);
+//ModelUser::RegisterUser($tabUser);
 
 $userInformation = ModelUser::GetInformation($tabUser);
 
@@ -46,7 +48,7 @@ $tabRequest = array(
 
 	'idUser' => htmlspecialchars($userInformation['id'])
 
-	);
+);
 
 ModelRequest::RegisterRequest($tabRequest);
 
